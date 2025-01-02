@@ -11,30 +11,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* 화면 중앙 정렬을 위해 */
+            height: 100vh; /* Center the widget vertically and horizontally */
             margin: 0;
             font-family: 'Lato', sans-serif;
         }
 
         #timer {
-            background-color: #00B2E2; /* 배경 색상 (이미지와 동일) */
-            color: white; /* 글자 색상 */
-            font-size: 4em; /* 글자 크기 */
+            background-color: #00B2E2; /* Background color */
+            color: white; /* Text color */
+            font-size: 4em; /* Font size */
             text-align: center;
-            border-radius: 15px; /* 라운드 모서리 */
-            padding: 20px 40px; /* 패딩 */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px 40px; /* Padding */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
         }
     </style>
 </head>
 <body>
 
 <div id="timer">
-    D+<span id="days">1</span> <!-- 초기값을 1로 설정 -->
+    D+<span id="days">1</span> <!-- Initial value set to 1 -->
 </div>
 
 <script>
-    const myDate = new Date('2024-10-14T00:00:00'); // 연애 시작 날짜 설정
+    const myDate = new Date('2024-10-14T00:00:00'); // Date when the relationship started
 
     // countdown
     let timer = setInterval(function() {
@@ -42,15 +42,15 @@
         const today = new Date().getTime();
 
         // get the difference
-        const diff = today - myDate.getTime(); // 현재 날짜와 시작 날짜의 차이
+        const diff = today - myDate.getTime(); // Difference between today and start date
 
         // math
-        let days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1; // 첫날을 1로 표시하기 위해 1 추가
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1; // Add 1 to show the first day as 1
 
         // display
         document.getElementById("days").innerHTML = days;
 
-    }, 1000); // 매초 업데이트
+    }, 1000); // Update every second
 </script>
 
 </body>

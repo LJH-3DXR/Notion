@@ -8,32 +8,27 @@
     <style>
         body {
             background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 화면 중앙 정렬을 위해 */
+            margin: 0;
+            font-family: 'Lato', sans-serif;
         }
 
         #timer {
-            color: #eeeeee;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: 'Lato', sans-serif;
-            font-size: 2em; /* 글자 크기 조정 */
-            letter-spacing: 5px;
-        }
-
-        .numbers {
-            font-family: 'Montserrat', sans-serif;
-            color: #183059;
-            font-size: 4em;
+            color: #183059; /* 글자 색상 */
+            font-size: 4em; /* 글자 크기 */
             text-align: center;
         }
     </style>
 </head>
-<body>https://github.com/LJH-3DXR/Notion/blob/main/countDown.html#L3C6
+<body>
 
 <div id="timer">
-    <span class="numbers" id="days"></span>D+
+    D+<span id="days">0</span>
 </div>
 
-</body>
 <script>
     const myDate = new Date('2024-10-24T00:00:00'); // 연애 시작 날짜 설정
 
@@ -53,4 +48,6 @@
 
     }, 1000); // 매초 업데이트
 </script>
+
+</body>
 </html>

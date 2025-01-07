@@ -1,30 +1,34 @@
-html
-
-
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-Day 카운터</title>
+    <title>D-Day Counter</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f00; /* Red background */
+            color: #fff; /* White text */
             text-align: center;
             margin-top: 50px;
         }
         .counter {
-            font-size: 2em;
-            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+            border-radius: 10px; /* Rounded corners */
+            padding: 20px;
+            width: 300px; /* Box width */
+            margin: 0 auto; /* Center the box */
+            font-size: 2em; /* Font size */
+            font-weight: bold; /* Bold text */
         }
     </style>
 </head>
 <body>
-    <h1>D-Day 카운터</h1>
+    <h1>D-Day Counter</h1>
     <div class="counter" id="dDayCounter"></div>
 
     <script>
-        // D-Day 날짜 설정 (2025년 4월 16일)
+        // Set D-Day date (April 16, 2025)
         const dDay = new Date('2025-04-16T00:00:00');
 
         function updateCounter() {
@@ -43,7 +47,7 @@ html
             }
         }
 
-        // 카운터 업데이트
+        // Update counter
         updateCounter();
     </script>
 </body>

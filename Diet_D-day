@@ -1,0 +1,50 @@
+html
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Day 카운터</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .counter {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>D-Day 카운터</h1>
+    <div class="counter" id="dDayCounter"></div>
+
+    <script>
+        // D-Day 날짜 설정 (2025년 4월 16일)
+        const dDay = new Date('2025-04-16T00:00:00');
+
+        function updateCounter() {
+            const today = new Date();
+            const timeDifference = dDay - today;
+            const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+            const counterElement = document.getElementById('dDayCounter');
+
+            if (daysRemaining > 0) {
+                counterElement.innerText = `D-${daysRemaining}`;
+            } else if (daysRemaining === 0) {
+                counterElement.innerText = 'D-0';
+            } else {
+                counterElement.innerText = `D+${Math.abs(daysRemaining)}`;
+            }
+        }
+
+        // 카운터 업데이트
+        updateCounter();
+    </script>
+</body>
+</html>
